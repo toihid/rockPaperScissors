@@ -1,7 +1,7 @@
-// Logic to get the computer logic
+// Function to randomly select the computers choice (rock, paper or Scissors)
 const getComputerChoice = () => {
   const choices = ["Rock", "Paper", "Scissors"];
-  // generate random integer form 0 to 2
+  // generate a random index between 0 and 2 to select a choice
   const randomNumber = Math.floor(Math.random() * 3);
   return choices[randomNumber];
 };
