@@ -6,3 +6,11 @@ const getComputerChoice = () => {
   return choices[randomNumber];
 };
 console.log(getComputerChoice());
+
+// Function to get hummans choice by prompt (rock, paper or scissors)
+
+const getHumanChoice = () => {
+  let humanChoice = window.prompt("Enter your choice");
+  console.log(humanChoice);
+};
+console.log(getHumanChoice());
