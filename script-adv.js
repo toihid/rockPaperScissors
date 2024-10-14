@@ -54,12 +54,12 @@ const playGame = (round) => {
     playRound(getHumanChoice(), getComputerChoice());
     i++;
   }
-  return (winner =
-    humanScore === computerScore
-      ? "Finally Tie"
-      : humanScore > computerScore
-      ? "Finally You are winner"
-      : "Finally You lose! try again later");
+
+  let result = "";
+  humanScore === computerScore && (result = "Tie");
+  humanScore > computerScore && (result = "Finally You are winner");
+  humanScore < computerScore && (result = "Finally You lose! try again later");
+  return result;
 };
 console.log(playGame(5));
 console.log("scor=", humanScore, computerScore);

@@ -12,8 +12,7 @@ const getComputerChoice = () => {
 
 // Function to get hummans choice by prompt (rock, paper or scissors)
 const getHumanChoice = () => {
-  let humanChoice = window.prompt("Enter your choice");
-  return humanChoice;
+  return window.prompt("Enter your choice");
 };
 
 // logic to play a single round
@@ -38,14 +37,13 @@ const playRound = (humanChoice, computerChoice) => {
   }
 };
 
-//const humanSelection = getHumanChoice();
-//const computerSelection = getComputerChoice();
-
 // define the total round of play and publish the final result
 const playGame = (round) => {
   let i = 0;
   while (i < round) {
-    playRound(getHumanChoice(), getComputerChoice());
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComputerChoice();
+    playRound(humanSelection, computerSelection);
     i++;
     console.log(
       "Score:",
@@ -55,11 +53,12 @@ const playGame = (round) => {
       computerScore
     );
   }
-  return (winner =
-    humanScore === computerScore
-      ? "Finally, Tie"
-      : humanScore > computerScore
-      ? "Finally, You are winner"
-      : "Finally, You lose! try again later");
+  let result = "";
+  humanScore === computerScore && (result = "Tie");
+  humanScore > computerScore && (result = "Finally You are winner");
+  humanScore < computerScore && (result = "Finally You lose! try again later");
+  return result;
+
+  return result;
 };
 console.log(playGame(5));
