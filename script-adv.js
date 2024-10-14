@@ -13,8 +13,7 @@ const getComputerChoice = () => {
 
 // Function to get hummans choice by prompt (rock, paper or scissors)
 const getHumanChoice = () => {
-  let humanChoice = window.prompt("Enter your choice");
-  return humanChoice;
+  return window.prompt("Enter your choice");
 };
 
 // logic to play a single round
