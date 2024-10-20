@@ -16,6 +16,7 @@
 .processing img {
   height: 150px; /* Adjust the size of the loading image */
   animation: shake 0.5s ease-in-out infinite; /* Animation with 0.5s duration, infinite loop */
+  max-width: 100%;
 }
 
 @keyframes shake {
