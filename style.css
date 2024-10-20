@@ -1,0 +1,76 @@
+.input-box {
+  display: flex;
+}
+.input-box button {
+  margin: 10px;
+  flex: 1;
+  height: 150px;
+}
+.input-box button i {
+  font-size: 5rem;
+  color: #f9c88e;
+}
+.processing {
+  text-align: center;
+}
+.processing img {
+  height: 150px; /* Adjust the size of the loading image */
+  animation: shake 0.5s ease-in-out infinite; /* Animation with 0.5s duration, infinite loop */
+}
+
+@keyframes shake {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-5px); /* Move up by 5px */
+  }
+  50% {
+    transform: translateY(0); /* Back to normal position */
+  }
+  75% {
+    transform: translateY(5px); /* Move down by 5px */
+  }
+  100% {
+    transform: translateY(0); /* Back to normal position */
+  }
+}
+
+#displayInputs i {
+  font-size: 5rem;
+  color: #f9c88e;
+}
+.d-none {
+  display: none !important;
+}
+#displayInputs {
+  display: flex;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.input {
+  flex: 1;
+  text-align: center;
+}
+tr.result-row td {
+  font-size: 1.5rem;
+  color: red;
+}
+#results {
+  width: 50%; /* Adjust width as needed */
+  border-collapse: collapse;
+  margin: 20px auto; /* Center the table horizontally */
+  font-family: Arial, sans-serif;
+}
+#results td,
+#results th {
+  padding: 10px;
+  border: 1px solid grey;
+}
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+button {
+  cursor: pointer;
+}
